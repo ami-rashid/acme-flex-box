@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    background-color: #333;
+    opacity: 0.95;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+    border-radius: 0px 0px 10px 10px;
+}
+  
+.header a {
+    float: left;
+    color: #f2f2f2;
+    justify-items: center;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+  
+.header a:hover {
+    background-color: #eff870;
+    color: black;
+}
+
+.header a.active {
+    background-color: #318fdb;
+    color: white;
+    font-size: 1.5rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: Helvetica;
+    margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.createUser {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem;
+    border: solid 2px black;
+    border-radius: 5px 20px;
+}
+
+div h2 {
+    color: 318fdb;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div h4 {
+    color: 318fdb;
+    width: 15rem;
+    height: 8rem;
+    margin: 20px;
+    border: solid 2px black;
+    border-radius: 5px 20px;
+}
+
+section.Users {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5rem;
+}
+
+div.createUser {
+    margin-left: auto;
+    margin-right: auto;
+    width: 25rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
+}
+
+#fname {
+    margin: 0.2rem;
+    color: gray;
+}
+#lname {
+    margin: 0.2rem;
+    color: gray;
+}
+
+#save {
+    background-color: #318fdb;
+    color: white;
+}
+
+@media (max-width:500px){
+    .header{
+        flex-direction: column;
+    }
+    section.Users{
+        justify-content: center;
+        flex-direction: column;
+    }
+}
