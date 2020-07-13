@@ -5,27 +5,25 @@
 .header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    position: fixed;
+    justify-content: left;
     width: 100%;
     background-color: #333;
     opacity: 0.95;
     overflow: hidden;
     margin-bottom: 0.5rem;
-    border-radius: 0px 0px 10px 10px;
 }
   
 .header a {
-    float: left;
+    display: flex;
+    justify-content: flex-start;
     color: #f2f2f2;
-    justify-items: center;
     padding: 0.5rem 1rem;
     text-decoration: none;
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
   
 .header a:hover {
-    background-color: #eff870;
+    background-color: #fce041;
     color: black;
 }
 
@@ -55,18 +53,18 @@ body {
 }
 
 div h2 {
-    color: 318fdb;
-    margin-left: auto;
-    margin-right: auto;
+    color: #318fdb;
+    margin: 1rem;
 }
 
 div h4 {
-    color: 318fdb;
+    color: #318fdb;
     width: 15rem;
-    height: 8rem;
-    margin: 20px;
+    height: 5rem;
+    margin: 1rem;
     border: solid 2px black;
     border-radius: 5px 20px;
+    margin-top: 1rem;
 }
 
 section.Users {
@@ -74,7 +72,6 @@ section.Users {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 5rem;
 }
 
 div.createUser {
@@ -87,29 +84,49 @@ form {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    justify-content: center;
+    align-content: center;
 }
 
 #fname {
     margin: 0.2rem;
-    color: gray;
+    color: rgb(190, 190, 190);
 }
 #lname {
     margin: 0.2rem;
-    color: gray;
+    color: rgb(190, 190, 190);
+}
+
+#clear {
+    max-width: 3rem;
+    background-color: white;
+    border: solid 1px black;
 }
 
 #save {
+    max-width: 3rem;
     background-color: #318fdb;
     color: white;
+    border: solid 1px black;
 }
 
 @media (max-width:500px){
     .header{
+        display: flex;
         flex-direction: column;
+        width: 100%;
     }
+    
+    body {
+        margin: 0px;
+    }
+
+    .createUser {
+        max-width: 90%;
+    }
+
     section.Users{
-        justify-content: center;
+        display: flex;
+        max-width: 90%;
         flex-direction: column;
     }
 }
